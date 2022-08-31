@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
-import static Helpers.Helpers.*;
+import static Helpers.Helpers.getIntFromUser;
+import static Helpers.Helpers.getStringFromUser;
 
 public class MovieLibrary {
 

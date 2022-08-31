@@ -17,7 +17,8 @@ public class Movie {
         this.actors = actors;
     }
 
-    public Movie() {}
+    public Movie() {
+    }
 
     @Override
     public String toString() {
