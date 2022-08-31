@@ -1,55 +1,47 @@
 package Models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
-
-    private String movieTitle;
-    private int yearOfDistribution;
+    private String title;
+    private int date;
     private String genre;
     private Director director;
-    private ArrayList<Actor> listOfMovieActors;
+    private List<Actor> actors;
 
-    public void addActorToMovie (Actor actor) {
-        this.listOfMovieActors.add(actor);
-
-    }
-
-    public Movie(String movieTitle, int yearOfDistribution, String genre, Director director, ArrayList<Actor> listOfMovieActors) {
-        this.movieTitle = movieTitle;
-        this.yearOfDistribution = yearOfDistribution;
+    public Movie(String title, int date, String genre, Director director, List<Actor> actors) {
+        this.title = title;
+        this.date = date;
         this.genre = genre;
         this.director = director;
-        this.listOfMovieActors = listOfMovieActors;
+        this.actors = actors;
     }
 
-    public Movie(){
-    }
+    public Movie() {}
 
     @Override
     public String toString() {
-        return "Title" + movieTitle + '\'' +
-                ", Year:'" + yearOfDistribution + '\'' +
-                ", Genre:'" + genre + '\'' +
-                ", Director:" + director +
-                ", Actors:" + listOfMovieActors;
+        return "Title: " + title +
+                "\nYear: " + date +
+                "\nGenre: " + genre +
+                "\nDirector: " + director +
+                "\nActors: " + actors;
     }
 
-    public String getMovieTitle() {
-        return movieTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setMovieTitle(String movieTitle) {
-        this.movieTitle = movieTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getYearOfDistribution() {
-        return yearOfDistribution;
+    public int getDate() {
+        return date;
     }
 
-    public void setYearOfDistribution(int yearOfDistribution) {
-        this.yearOfDistribution = yearOfDistribution;
+    public void setDate(int date) {
+        this.date = date;
     }
 
     public String getGenre() {
@@ -68,12 +60,11 @@ public class Movie {
         this.director = director;
     }
 
-    public List<Actor> getListOfMovieActors() {
-        return listOfMovieActors;
+    public List<Actor> getActors() {
+        return actors;
     }
 
-    public void setListOfMovieActors(ArrayList<Actor> listOfMovieActors) {
-        this.listOfMovieActors = listOfMovieActors;
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
     }
-
 }

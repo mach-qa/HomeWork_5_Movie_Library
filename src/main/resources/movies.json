@@ -1,0 +1,119 @@
+{
+  "movies": [
+    {
+      "title": "Sin City",
+      "director": {
+        "firstName": "Robert",
+        "lastName": "Rodriguez"
+      },
+      "genre": "Criminal",
+      "date": 2005,
+      "actors": [
+        {
+          "firstName": "Michael",
+          "lastName": "Duncan"
+        },
+        {
+          "firstName": "Bruce",
+          "lastName": "Willis"
+        },
+        {
+          "firstName": "Mickey",
+          "lastName": "Rourke"
+        }
+      ]
+    },
+    {
+      "title": "Apollo 13",
+      "director": {
+        "firstName": "Tom",
+        "lastName": "Shadyac"
+      },
+      "genre": "Sci-fi",
+      "date": 1994,
+      "actors": [
+        {
+          "firstName": "Tom",
+          "lastName": "Hanks"
+        },
+        {
+          "firstName": "Ed",
+          "lastName": "Haris"
+        },
+        {
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        }
+      ]
+    },
+    {
+      "title": "Truman Show",
+      "director": {
+        "firstName": "Peter",
+        "lastName": "Weir"
+      },
+      "genre": "Drama",
+      "date": 1998,
+      "actors": [
+        {
+          "firstName": "Jim",
+          "lastName": "Carrey"
+        },
+        {
+          "firstName": "Natascha",
+          "lastName": "McElhone"
+        },
+        {
+          "firstName": "Ed",
+          "lastName": "Haris"
+        }
+      ]
+    },
+    {
+      "title": "The Green Mile",
+      "director": {
+        "firstName": "Frank",
+        "lastName": "Darabont"
+      },
+      "genre": "Sci-fi",
+      "date": 2000,
+      "actors": [
+        {
+          "firstName": "Tom",
+          "lastName": "Hanks"
+        },
+        {
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Duncan"
+        }
+      ]
+    },
+    {
+      "title": "The Expendables",
+      "director": {
+        "firstName": "Sylvester",
+        "lastName": "Stallone"
+      },
+      "genre": "Action",
+      "date": 2010,
+      "actors": [
+        {
+          "firstName": "Gary",
+          "lastName": "Sinise"
+        },
+        {
+          "firstName": "Bruce",
+          "lastName": "Willis"
+        },
+        {
+          "firstName": "Mickey",
+          "lastName": "Rourke"
+        }
+      ]
+    }
+  ]
+}

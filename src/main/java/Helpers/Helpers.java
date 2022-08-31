@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Helpers {
 
-    public static String getStringFromUser () {
-        Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+
+    public static String getStringFromUser() {
         return scanner.next();
     }
 
     public static int getIntFromUser() {
-        Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
-
 }

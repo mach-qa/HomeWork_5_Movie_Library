@@ -10,6 +10,8 @@ public class Director {
         this.lastName = lastName;
     }
 
+    public Director () {};
+
     public String getFirstName() {
         return firstName;
     }
