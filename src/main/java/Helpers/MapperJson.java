@@ -11,11 +11,10 @@ import java.util.List;
 
 public class MapperJson {
 
-    public static List<MovieLibrary> deserializedJsonList() throws IOException {
-        File jsonFile = new File("src/main/resources/movies.json");
+    public static MovieLibrary deserializedJson(String path) throws IOException {
+        File jsonFile = new File(path);
         return new ObjectMapper().enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
                 .readValue(jsonFile, new TypeReference<>() {
                 });
     }
-
 }

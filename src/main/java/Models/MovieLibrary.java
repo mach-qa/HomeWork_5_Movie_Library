@@ -4,48 +4,37 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
-import static Helpers.Helpers.getIntFromUser;
-import static Helpers.Helpers.getStringFromUser;
+import static Helpers.UserInputHelpers.getIntFromUser;
+import static Helpers.UserInputHelpers.getStringFromUser;
 
 public class MovieLibrary {
 
-    private static List<Movie> moviesList;
-    private String movies;
+    private List<Movie> movies;
 
     public MovieLibrary() {
     }
 
-    public static void findAFilmsInDateRange() {
-        System.out.println("Please provide the lowest require year");
-        int lowerYear = getIntFromUser();
-        System.out.println("Please provide the highest require year");
-        int higherYear = getIntFromUser();
-
+    public void findAFilmsInDateRange(int lowerYear, int higherYear) {
         System.out.println("Movies released between these years are:");
-        for (Movie movie : moviesList) {
+        for (Movie movie : movies) {
             if (lowerYear <= movie.getDate() && higherYear >= movie.getDate()) {
                 System.out.println(movie.getTitle());
             }
         }
     }
 
-    public static void randomMovie() {
+    public void randomMovie() {
         Random random = new Random();
-        System.out.println(moviesList.get(random.nextInt(moviesList.size()))
+        System.out.println(movies.get(random.nextInt(movies.size()))
                 .toString()
                 .replaceAll("[\\[\\](){}]", ""));
     }
 
-    public static void findActorMovies() {
-        System.out.println("Please provide actor first name");
-        String actorFirstName = getStringFromUser();
-        System.out.println("Please provide actor second name");
-        String actorLastName = getStringFromUser();
-
-        for (Movie movie : moviesList) {
+    public void findActorMovies(String actorFirstName, String actorLastName) {
+        for (Movie movie : movies) {
             for (int i = 0; i < movie.getActors().size(); i++) {
-                if (Objects.equals(actorFirstName, movie.getActors().get(i).getFirstName())
-                        && Objects.equals(actorLastName, movie.getActors().get(i).getLastName())) {
+                if (actorFirstName.equals(movie.getActors().get(i).getFirstName())
+                        && actorLastName.equals(movie.getActors().get(i).getLastName())) {
                     System.out.println(movie.getTitle());
                 }
             }
@@ -53,14 +42,14 @@ public class MovieLibrary {
     }
 
     public MovieLibrary(List<Movie> movies) {
-        MovieLibrary.moviesList = movies;
+        this.movies = movies;
     }
 
     public List<Movie> getMovies() {
-        return moviesList;
+        return movies;
     }
 
     public void setMovies(List<Movie> movies) {
-        MovieLibrary.moviesList = movies;
+        this.movies = movies;
     }
 }
